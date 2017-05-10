@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Agregar mascota</title>
+	<link rel="stylesheet" type="text/css" href="css/general.css">
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="App" ng-controller="Ctrl">
+		<header>
+			<nav>
+				<div class="nav-wrapper">
+					<a href="index.html" class="brand-logo center"><img src="img/patalogo.png" class="responsive-img"></a>
+					<ul id="nav-mobile" class="left hide-on-med-and-down"> 
+						<li>
+							<div class="fixed-action-btn horizontal click-to-toggle">
+								<a class="btn-floating btn-large red">
+									<i class="material-icons">menu</i>
+								</a>
+								<ul>
+									<li><a class="btn-floating green" href="mismascotas.html"><i class="material-icons">pets</i></a></li>
+									<li><a class="btn-floating yellow darken-1" href="tratamientos.html"><i class="material-icons">assignment</i></a></li>
+									<li><a class="btn-floating green" href="agregarmasc.html"><i class="material-icons">add</i></a></li>
+									<li><a class="btn-floating blue" href="opciones.html"><i class="material-icons">settings</i></a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+
+			<h1>Agregar mascota</h1>
+
+			<form class="col s6 m6 l6">
+
+				<div class="input-field col l6">
+					<select ng-model="tipomasc" ng-options="tipo as tipo.descrip for tipo in tipos track by tipo.id">
+					</select>
+					<label>Tipo de mascota</label>
+				</div>
+
+				<div class="input-field col l6">
+					<input id="nombre" type="text" class="validate" ng-model="name">
+					<label for="nombre">Nombre</label>
+				</div>
+
+				<div class="input-field col s6 m6 l6">
+					<input id="date" class="datepicker" type="text" ng-model="fecha"> 
+					<label for="date">Fecha Nac.</label>
+				</div>
+				<div class="file-field input-field col s6 m6 l6">
+					<div class="btn">
+						<i class="material-icons">add_a_photo</i>
+						<input type="file" id="foto"  accept="image/*">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text" id="url">
+					</div> 
+				</div>
+
+				<div class="col s12 m8 offset-m2 l6 offset-l3">
+					<div class="card-panel grey lighten-5 z-depth-1">
+						<div class="row valign-wrapper">
+							<div class="col s5 m4 l3">
+								<img src="" id="preview" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+							</div>
+							<div class="col s7 s8 l9">
+								<span class="black-text">
+									<div id="tipo">Tipo: {{ tipomasc.descrip }}</div>
+									<div id="cardnom">Nombre: {{ name }}</div>
+									<div id="fecnac">Fecha de nacimiento: {{ fecha }}</div>
+
+									<button class="btn waves-effect waves-light right" type="submit" name="action">Agregar 
+										<i class="material-icons right">send</i>
+									</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			  	//ACTIVA EL SELECT
+			  	$('select').material_select();
+
+			    //ACTIVA EL DATEPICKER + CONFIGURACION
+			    $('.datepicker').pickadate({
+				    selectMonths: true, // Creates a dropdown to control month
+				    selectYears: 15 // Creates a dropdown of 15 years to control year
+				});
+
+
+			});
+
+		</script>
+		<script>
+			//SCRIPT PARA OBTENER TODO EL PATH DEL ARCHIVO LOCAL CARGADO EN INPUT FILE
+			$(document).ready(function(){
+
+				function readURL(input) {
+					if (input.files && input.files[0]) {
+						var reader = new FileReader();
+
+						reader.onload = function (e) {
+					        	//#preview es el id de donde esta el tag img y se le establece el full path en src
+					        	$('#preview').attr('src', e.target.result);
+					        }
+
+					        reader.readAsDataURL(input.files[0]);
+					    }
+					}
+
+					$('#foto').change(function(){
+
+						readURL(this);
+
+					});
+				});
+			</script>
+
+			<script>
+				angular.module('App', []).controller('Ctrl', function($scope) {
+					$scope.tipos = [
+					{id:'10', descrip:'Perro'},
+					{id:'20', descrip:'Gato'},
+					{id:'3', descrip:'Hamster'},
+					{id:'4', descrip:'Cobayo'}
+					];
+				});
+			</script>
+
+		</body>
+		</html>

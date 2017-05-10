@@ -1,0 +1,17 @@
+header{
+	margin-bottom: 4% !important;
+}
+
+input{
+	padding-left: 2% !important;
+}
+
+h1{
+	padding-bottom: 2% !important;
+	color:grey;
+}
+
+.brand-logo > img{
+	max-height: 64px !important;
+	padding: 6% 0 !important;
+}
