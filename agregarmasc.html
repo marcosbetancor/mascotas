@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Agregar mascota</title>
 	<link rel="stylesheet" type="text/css" href="css/general.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloagregarmasc.css">
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -63,15 +64,17 @@
 						<input class="file-path validate" type="text" id="url">
 					</div> 
 				</div>
-
-				<div class="col s12 m8 offset-m2 l6 offset-l3">
+                
+                <!-- TARJETA -->
+                
+				<div class="col s12 m8 offset-m2 l6 offset-l3 center-block tarjeta">
 					<div class="card-panel grey lighten-5 z-depth-1">
 						<div class="row valign-wrapper">
 							<div class="col s5 m4 l3">
 								<img src="" id="preview" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
 							</div>
 							<div class="col s7 s8 l9">
-								<span class="black-text">
+								<span class="black-text flow-text">
 									<div id="tipo">Tipo: {{ tipomasc.descrip }}</div>
 									<div id="cardnom">Nombre: {{ name }}</div>
 									<div id="fecnac">Fecha de nacimiento: {{ fecha }}</div>
@@ -84,6 +87,8 @@
 						</div>
 					</div>
 				</div>
+				
+				<!-- CIERRA TARJETA -->
 			</form>
 
 		</div>

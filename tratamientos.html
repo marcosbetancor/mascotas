@@ -1,43 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mis mascotas</title>
-	<link rel="stylesheet" type="text/css" href="css/general.css">
-	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Mis mascotas</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/estilotrat.css">
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
 </head>
+
 <body>
-	<header>
-			<nav>
-				<div class="nav-wrapper">
-					<a href="index.html" class="brand-logo center"><img src="img/patalogo.png" class="responsive-img"></a>
-					<ul id="nav-mobile" class="left hide-on-med-and-down"> 
-						<li>
-							<div class="fixed-action-btn horizontal click-to-toggle">
-								<a class="btn-floating btn-large red">
-									<i class="material-icons">menu</i>
-								</a>
-								<ul>
-									<li><a class="btn-floating green" href="mismascotas.html"><i class="material-icons">pets</i></a></li>
-									<li><a class="btn-floating yellow darken-1" href="tratamientos.html"><i class="material-icons">assignment</i></a></li>
-									<li><a class="btn-floating green" href="agregarmasc.html"><i class="material-icons">add</i></a></li>
-									<li><a class="btn-floating blue" href="opciones.html"><i class="material-icons">settings</i></a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center"><img src="img/patalogo.png" class="responsive-img"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li>
+                        <div class="fixed-action-btn horizontal click-to-toggle">
+                            <a class="btn-floating btn-large red">
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating green" href="mismascotas.html"><i class="material-icons">pets</i></a></li>
+                                <li><a class="btn-floating yellow darken-1" href="tratamientos.html"><i class="material-icons">assignment</i></a></li>
+                                <li><a class="btn-floating green" href="agregarmasc.html"><i class="material-icons">add</i></a></li>
+                                <li><a class="btn-floating blue" href="opciones.html"><i class="material-icons">settings</i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-	<div class="container">
-		
+    <div class="container">
 
-	</div>
-	
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <h1>Tratamientos preventivos</h1>
+
+        <section>
+            <h2>Tratamientos para perros</h2>
+            <table class="striped centered flow-text">
+                <caption>Vacunación para perros</caption>
+                <thead>
+                    <tr>
+                        <th>Tiempo</th>
+                        <th>Vacuna</th>
+                        <th>Repetición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>45 días</td>
+                        <td>Quintuple</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>66 días</td>
+                        <td>Refuerzo quintuple</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>90 días</td>
+                        <td>Sextuple</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4 meses</td>
+                        <td>Antirrabica</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="card-panel flow-text">
+                <h3 class="flow-text">Desparacitación</h3>
+                <p>Debe desparacitar al cachorro a los 15 días de vida, al igual que a la madre. Luego cada 3 meses, a los cachorros solamente, hasta el año de vida. Los adultos deben ser desparacitados anualmente, como preventivo. En caso de que el adulto presente signos, desparacitar y repetir a los 6 meses.</p>
+            </div>
+
+        </section>
+        
+        <hr><!-- LINEA -->
+        
+        <section>
+
+            <h2>Tratamientos para gatos</h2>
+            <table class="striped centered flow-text">
+                <caption>Vacunación para gatos</caption>
+                <thead>
+                    <tr>
+                        <th>Tiempo</th>
+                        <th>Vacuna</th>
+                        <th>Repetición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2 meses</td>
+                        <td>Triple</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3 meses</td>
+                        <td>Refuerzo triple</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4 meses</td>
+                        <td>Antirrábica</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="card-panel flow-text">
+                <h3 class="flow-text">Desparacitación</h3>
+                <p>Debe desparacitar al cachorro a los 15 días de vida, al igual que a la madre. Luego cada 3 meses, a los cachorros solamente, hasta el año de vida. Los adultos deben ser desparacitados anualmente, como preventivo. En caso de que el adulto presente signos, desparacitar y repetir a los 6 meses.</p>
+            </div>
+
+        </section>
+    </div>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
+
 </html>

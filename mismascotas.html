@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Mis mascotas</title>
-	<link rel="stylesheet" type="text/css" href="css/general.css">
-	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Mis mascotas</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/estilomismasc.css">
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
 </head>
+
 <body>
-	<header>
-			<nav>
-				<div class="nav-wrapper">
-					<a href="index.html" class="brand-logo center"><img src="img/patalogo.png" class="responsive-img"></a>
-					<ul id="nav-mobile" class="left hide-on-med-and-down"> 
-						<li>
-							<div class="fixed-action-btn horizontal click-to-toggle">
-								<a class="btn-floating btn-large red">
-									<i class="material-icons">menu</i>
-								</a>
-								<ul>
-									<li><a class="btn-floating green" href="mismascotas.html"><i class="material-icons">pets</i></a></li>
-									<li><a class="btn-floating yellow darken-1" href="tratamientos.html"><i class="material-icons">assignment</i></a></li>
-									<li><a class="btn-floating green" href="agregarmasc.html"><i class="material-icons">add</i></a></li>
-									<li><a class="btn-floating blue" href="opciones.html"><i class="material-icons">settings</i></a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center"><img src="img/patalogo.png" class="responsive-img"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li>
+                        <div class="fixed-action-btn horizontal click-to-toggle">
+                            <a class="btn-floating btn-large red">
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating green" href="mismascotas.html"><i class="material-icons">pets</i></a></li>
+                                <li><a class="btn-floating yellow darken-1" href="tratamientos.html"><i class="material-icons">assignment</i></a></li>
+                                <li><a class="btn-floating green" href="agregarmasc.html"><i class="material-icons">add</i></a></li>
+                                <li><a class="btn-floating blue" href="opciones.html"><i class="material-icons">settings</i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-	<div class="container">
-		
+    <div class="container">
 
-	</div>
-	
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <!-- TARJETA -->
+
+        <div class="col s12 m8 offset-m2 l6 offset-l3 center-block tarjeta">
+           
+            <a href="#"><img src="img/close.png" class="right close"></a>
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s5 m4 l3">
+                        <img src="img/perro1ej.jpg"  alt="" class="responsive-img">
+                        <!-- notice the "circle" class -->
+                    </div>
+                    <div class="col s7 s8 l9">
+                        <span class="black-text flow-text right">
+									<div id="tipo">Tipo: Perro</div>
+									<div id="cardnom">Nombre: Moncho</div>
+									<div id="fecnac">Fecha de nacimiento: 04/03/2009</div>
+				        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CIERRA TARJETA -->
+        
+        <!-- TARJETA -->
+
+        <div class="col s12 m8 offset-m2 l6 offset-l3 center-block tarjeta">
+           
+            <a href="#"><img src="img/close.png" class="right close"></a>
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s5 m4 l3">
+                        <img src="img/perro2ej.jpg" alt="" class="responsive-img">
+                        <!-- notice the "circle" class -->
+                    </div>
+                    <div class="col s7 s8 l9">
+                        <span class="black-text flow-text right">
+									<div id="tipo">Tipo: Perro</div>
+									<div id="cardnom">Nombre: Moncho</div>
+									<div id="fecnac">Fecha de nacimiento: 04/03/2009</div>
+				        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CIERRA TARJETA -->
+        
+        <!-- TARJETA -->
+
+        <div class="col s12 m8 offset-m2 l6 offset-l3 center-block tarjeta">
+            <a href="#"><img src="img/close.png" class="right close"></a>
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                    <div class="col s5 m4 l3">
+                        <img src="img/gatoej.jpg"  alt="" class="responsive-img">
+                        <!-- notice the "circle" class -->
+                    </div>
+                    <div class="col s7 s8 l9">
+                        <span class="black-text flow-text right">
+									<div id="tipo">Tipo: Gato</div>
+									<div id="cardnom">Nombre: Julio</div>
+									<div id="fecnac">Fecha de nacimiento: 04/03/2009</div>
+				        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CIERRA TARJETA -->
+        
+
+    </div>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 </html>
